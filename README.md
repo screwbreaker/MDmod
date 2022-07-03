@@ -1,7 +1,7 @@
 # MDmod
 Yes, another Mega Drive switchless mod
 
-![Board](https://github.com/screwbreaker/MDmod/blob/main/PCBs.png?raw=true)
+![Board](https://github.com/screwbreaker/MDmod/blob/main/pictures/PCBs.png?raw=true)
 
 ### Summary
 This is another version of the classic switchless MOD for Mega Drive/Genesis.
@@ -11,10 +11,10 @@ For each micro there is a little PCB for help in the installation.
 
 ### History
 Everything started because I got some Padauk microcontrollers, and I wanted to play with them.
-I choose to implement the Mega Drive switchless mod, because it seem very appropriate as a basic program for a microcontroller.
+I choose to implement the Mega Drive switchless mod, because it seem very appropriate, as a basic program for microcontrollers.
 
 Unfortunately, I've never enought free time to work on this project.
-When I finally managed to make it, the padauk microcontrollers where out of stock.
+When I finally managed to make it the padauk microcontrollers where out of stock.
 They still cheap, but not easy to found now.
 So, since SDCC also handle PIC microcontrollers, I thought it was nice to port the code for the old PIC16F630.
 
