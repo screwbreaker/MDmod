@@ -74,8 +74,6 @@ This is made to avoid unwanted access to the MCD bios meanwhile the eeprom is se
 However the microcontroller can't keep the Mega Drive in reset by holding the reset signal.
 The reset signal is generated internally every time the button is pressed, the reset time is fixed and can't be extended.
 
-The MCD mode can be also used to make enable the auto console reset after the region change.
-
 ### Reset issue
 Sometime during a region change, an unwanted reset can happen.
 The mod use a debounce to avoid this. But this is also dependant from the lenght of the wire from the reset button.
