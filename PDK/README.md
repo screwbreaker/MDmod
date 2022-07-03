@@ -32,5 +32,5 @@ The hardware and the software are provided to you 'as is' and without any expres
 
 ### Thanks
 - Thanks to the guys of the [Free PDK](https://free-pdk.github.io/) project. They are really smart and awesome!
-- The [SDCC](http://sdcc.sourceforge.net/)
+- The [SDCC](http://sdcc.sourceforge.net/) team.
 
