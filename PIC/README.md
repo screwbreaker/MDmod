@@ -16,6 +16,7 @@ To manually compile it the "--use-non-free" parameter must be set.
 Otherwire use the MAKEFILE in the firmware directory.
 
 ### License
+The PCBs are under the CERN OHL license.
 The firmwares, under the GPL3.
 
 This is an OPEN project.
