@@ -70,8 +70,8 @@
 #define SHOW_TURNS	8	// about 2s
 #define CONFIRM_TURNS	5	// 3 slow blinks
 
-#define ledOn(led)		bools.led_type ? (clearPin(led)) : (setPin(led))
-#define ledOff(led)		bools.led_type ? (setPin(led)) : (clearPin(led))
+#define ledOn(led)	bools.led_type ? (clearPin(led)) : (setPin(led))
+#define ledOff(led)	bools.led_type ? (setPin(led)) : (clearPin(led))
 
 #define isBtnPressed	isPinLow
 #define reset()		bools.reset = true; \
@@ -82,7 +82,7 @@
 #define TMR1_reset()	TMR1H = 0xBF; \
 			TMR1L = 0xFF
 
-#define COMPARATOR_OFF() 	CM2 = 1; \
+#define COMPARATOR_OFF()	CM2 = 1; \
 				CM1 = 1; \
 				CM0 = 1
 
