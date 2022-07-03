@@ -1,7 +1,7 @@
 # MDmod PDK
 Mega Drive switchless MOD for Padauk microcontroller
 
-![Board](https://raw.githubusercontent.com/screwbreaker/MDmod/master/PDK/render/top.png)
+![Board](https://github.com/screwbreaker/MDmod/blob/main/PDK/render/MD_Mod_top.png?raw=true)
 
 ### Summary
 This mod is writted for the PFS173-S14 microcontroller.
