@@ -43,7 +43,7 @@ Only few components, the micro, a decoupling capacitor, and a resistor for the L
 
 ### Warning
 The PCB are not the same!
-The two microcontrolers have the same package but a different pinout.
+The two microcontroller have the same package but a different pinout.
 So, each micro have his own board, don't mix them!
 
 Do not close both CC and CA jumpers!
