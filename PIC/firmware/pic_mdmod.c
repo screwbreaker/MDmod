@@ -47,44 +47,44 @@
 #define DEFAULT_REGION EU	// This is the default region used on the first boot // not used on PIC
 
 // pin settings
-#define RED				C5	// red LED
-#define GREEN			C4	// green LED
-#define BLUE			C3	// blue LED
+#define RED		C5	// red LED
+#define GREEN		C4	// green LED
+#define BLUE		C3	// blue LED
 
-#define VIDEO			A1	// video (50/60Hz)
+#define VIDEO		A1	// video (50/60Hz)
 #define LANGUAGE	A0	// language (ENG/JAP)
 #define INV_VID		C2	// inverted video (For Mega CD)
 #define INV_LANG	C1	// inverted language (For Mega CD)
-#define RESET			C0	// reset output
+#define RESET		C0	// reset output
 #define BUTTON		A2	// reset button in -- an interrupt capable pin must be used
-#define MCD				A4	// if low, enable the Mega CD mode. reset the console after a region change
+#define MCD		A4	// if low, enable the Mega CD mode. reset the console after a region change
 #define LED_TYPE	A5	// HIGH = common anode, LOW = common cathode
 
 /* do not modify anything under this line */
 
-#define RESET_DELAY			16	// about 260ms
-#define DEBOUNCE_DELAY	3		// about 50ms
-#define CHANGE_TIME			152	// about 2.5 sec with 16ms tick
-#define LED_FAST_DELAY	8		// about 130ms with 16ms tick
+#define RESET_DELAY	16	// about 260ms
+#define DEBOUNCE_DELAY	3	// about 50ms
+#define CHANGE_TIME	152	// about 2.5 sec with 16ms tick
+#define LED_FAST_DELAY	8	// about 130ms with 16ms tick
 #define LED_SLOW_DELAY	16	// about 260ms with 16ms tick
-#define SHOW_TURNS			8		// about 2s
-#define CONFIRM_TURNS		5		// 3 slow blinks
+#define SHOW_TURNS	8	// about 2s
+#define CONFIRM_TURNS	5	// 3 slow blinks
 
 #define ledOn(led)		bools.led_type ? (clearPin(led)) : (setPin(led))
 #define ledOff(led)		bools.led_type ? (setPin(led)) : (clearPin(led))
 
 #define isBtnPressed	isPinLow
-#define reset()				bools.reset = true; \
-											delay = RESET_DELAY
+#define reset()		bools.reset = true; \
+			delay = RESET_DELAY
 #define next_region()	region = ((region + 1) % REGIONS)
 
 // start the timer counter from 0xBFFF to get a 16ms tick
 #define TMR1_reset()	TMR1H = 0xBF; \
-											TMR1L = 0xFF
+			TMR1L = 0xFF
 
 #define COMPARATOR_OFF() 	CM2 = 1; \
-													CM1 = 1; \
-													CM0 = 1
+				CM1 = 1; \
+				CM0 = 1
 
 #define ALL_OFF REGIONS
 
@@ -97,18 +97,18 @@ SetFuses(_INTRC_OSC_NOCLKOUT & _WDTE_OFF & _PWRTE_OFF & _MCLRE_OFF);
 /* global typedefs and structures */
 typedef union {
 	struct {
-		unsigned tick						: 1;
-		unsigned btn_event			: 1;
-		unsigned show_regions		: 1;
+		unsigned tick		: 1;
+		unsigned btn_event	: 1;
+		unsigned show_regions	: 1;
 		unsigned confirm_region	: 1;
-		unsigned reset					: 1;
-		unsigned led_state			: 1;
-		unsigned mcd						: 1;
-		unsigned led_type				: 1;
+		unsigned reset		: 1;
+		unsigned led_state	: 1;
+		unsigned mcd		: 1;
+		unsigned led_type	: 1;
 	};
 
 	struct {
-		unsigned BOOLS					: 8;
+		unsigned BOOLS		: 8;
 	};
 } __Bools_t;
 
@@ -186,17 +186,17 @@ void setup() {
 
 	NOT_RAPU = 0; // enable pullups on PORTA
 
-	bools.tick						= false;
-	bools.btn_event			  = false;
-	bools.show_regions		= false;
+	bools.tick		= false;
+	bools.btn_event		= false;
+	bools.show_regions	= false;
 	bools.confirm_region	= false;
-	bools.reset						= false;
-	bools.led_state				= true;
-	bools.mcd							= false;
+	bools.reset		= false;
+	bools.led_state		= true;
+	bools.mcd		= false;
 
 	// enable T16 timer to generate an interrupt about every 16 milliseconds
 	TMR1CS			= 0;	// timer clock source internal clock
-	NOT_T1SYNC	= 1;	// ingore synchronization, internal clock is used
+	NOT_T1SYNC		= 1;	// ingore synchronization, internal clock is used
 	T1OSCEN			= 0;	// LP oscillator off
 	T1CKPS0			= 0;	// no prescaler
 	T1CKPS1			= 0;	// no prescaler
@@ -207,12 +207,12 @@ void setup() {
 
 	// Enable interrupts
 	INTEDG			= 0;	// Interrupt on falling edge
-	INTE				= 1;	// PA2 external interrupt enabled
-	RAIE				= 0;	// PORTA change interrupt disabled
-	PEIE				= 1;	// peripheral interrupt enabled
+	INTE			= 1;	// PA2 external interrupt enabled
+	RAIE			= 0;	// PORTA change interrupt disabled
+	PEIE			= 1;	// peripheral interrupt enabled
 	TMR1IE			= 1;	// TIMER1 overflow interrupt enabled
-	EEIE				= 1;	// EEPROM write complete interrupt enabled
-	GIE					= 1;	// global interrupt enabled
+	EEIE			= 1;	// EEPROM write complete interrupt enabled
+	GIE			= 1;	// global interrupt enabled
 } // setup()
 
 void main(void) {
@@ -409,13 +409,13 @@ void set_led(region_t region) {
 // save current region
 void _save(void) {
 	EEDATA	= region;	// data to save
-	EEADR		= 0;			// address where save data
-	WREN		= 1;			// enable writes to data EEPROM
-	GIE			= 0;			// disable interrupts
+	EEADR	= 0;		// address where save data
+	WREN	= 1;		// enable writes to data EEPROM
+	GIE	= 0;		// disable interrupts
 	EECON2	= 0x55;		// required for EEPROM WRITE
 	EECON2	= 0x0AA;	// required for EEPROM WRITE
-	WR			= 1;			// start writing
-	GIE			= 1;			// enable interrupts
+	WR	= 1;		// start writing
+	GIE	= 1;		// enable interrupts
 } //_save()
 
 // restore last region
