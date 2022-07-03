@@ -27,5 +27,5 @@ Don't go out this basic guideline.
 The hardware and the software are provided to you 'as is' and without any express or implied warranties whatsoever with respect to its functionality, operability or use, including, without limitation, any implied warranties of merchantability, fitness for a particular purpose or infringement. We expressly disclaim any liability whatsoever for any direct, indirect, consequential, incidental or special damages, including, without limitation, lost revenues, lost profits, losses resulting from business interruption or loss of data, regardless of the form of action or legal theory under which the liability may be asserted, even if advised of the possibility or likelihood of such damages.
 
 ### Thanks
-- The [SDCC](http://sdcc.sourceforge.net/)
+- The [SDCC](http://sdcc.sourceforge.net/) team.
 
