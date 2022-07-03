@@ -51,36 +51,36 @@
 #define DEFAULT_REGION EU	// This is the default region used on the first boot
 
 // pin settings
-#define RED				PA,7	// red LED
-#define GREEN			PA,6	// green LED
-#define BLUE			PA,5	// blue LED
+#define RED		PA,7	// red LED
+#define GREEN		PA,6	// green LED
+#define BLUE		PA,5	// blue LED
 
-#define VIDEO			PB,1	// video (50/60Hz)
+#define VIDEO		PB,1	// video (50/60Hz)
 #define LANGUAGE	PB,2	// language (ENG/JAP)
 #define _VIDEO		PA,3	// inverted video (For Mega CD)
 #define _LANGUAGE	PA,4	// inverted language (For Mega CD)
-#define RESET			PA,0	// reset output
+#define RESET		PA,0	// reset output
 #define BUTTON		PB,0	// reset button in
-#define MCD				PB,6	// if low enable the Mega CD mode, reset the console after a region change
+#define MCD		PB,6	// if low enable the Mega CD mode, reset the console after a region change
 #define LED_TYPE	PB,5	// HIGH = common anode, LOW = common cathode
 
 /* do not modify anything under this line */
 
-#define ledOn(led)		bools.led_type ? (clearBit(led)) : (setBit(led))
-#define ledOff(led)		bools.led_type ? (setBit(led)) : (clearBit(led))
+#define ledOn(led)	bools.led_type ? (clearBit(led)) : (setBit(led))
+#define ledOff(led)	bools.led_type ? (setBit(led)) : (clearBit(led))
 
 #define isBtnPressed	isPinLow
-#define reset()				bools.reset = true; \
-											delay = RESET_DELAY
+#define reset()		bools.reset = true; \
+			delay = RESET_DELAY
 #define next_region()	region = ((region + 1) % REGIONS)
 
-#define RESET_DELAY			33	// about 270ms
+#define RESET_DELAY	33	// about 270ms
 #define DEBOUNCE_DELAY	5		// about 40ms
-#define CHANGE_TIME			200	// about 1.6 sec with 8ms tick
+#define CHANGE_TIME	200	// about 1.6 sec with 8ms tick
 #define LED_FAST_DELAY	16	// about 130ms with 8ms tick
 #define LED_SLOW_DELAY	33	// about 270ms with 8ms tick
-#define SHOW_TURNS			8		// about 1s
-#define CONFIRM_TURNS		5		// 3 slow blinks
+#define SHOW_TURNS	8		// about 1s
+#define CONFIRM_TURNS	5		// 3 slow blinks
 
 #define ALL_OFF REGIONS
 
@@ -88,18 +88,18 @@
 /* global typedefs and structures */
 typedef union {
 	struct {
-		unsigned tick						: 1;
-		unsigned btn_event			: 1;
-		unsigned show_regions		: 1;
+		unsigned tick		: 1;
+		unsigned btn_event	: 1;
+		unsigned show_regions	: 1;
 		unsigned confirm_region	: 1;
-		unsigned reset					: 1;
-		unsigned led_state			: 1;
-		unsigned mcd						: 1;
-		unsigned led_type				: 1;
+		unsigned reset		: 1;
+		unsigned led_state	: 1;
+		unsigned mcd		: 1;
+		unsigned led_type	: 1;
 	};
 
 	struct {
-		unsigned BOOLS					: 8;
+		unsigned BOOLS		: 8;
 	};
 } __Bools_t;
 
@@ -143,7 +143,7 @@ void interrupt(void) __interrupt(0) {
 
 unsigned char _sdcc_external_startup(void) {
 	// setup 8MHz sysclock and let easypdk programmer do the calibration (after writing)
-	EASY_PDK_INIT_SYSCLOCK_8MHZ();					//use 8MHz sysclock
+	EASY_PDK_INIT_SYSCLOCK_8MHZ();		//use 8MHz sysclock
 	EASY_PDK_CALIBRATE_IHRC(8000000,5000);	//tune SYSCLK to 8MHz @ 5.000V
 	EASY_PDK_CALIBRATE_BG();
 	EASY_PDK_FUSE(FUSE_BOOTUP_FAST | FUSE_SECURITY_OFF);
