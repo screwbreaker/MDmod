@@ -12,8 +12,8 @@ This MOD must be compiled with [SDCC](http://sdcc.sourceforge.net/).
 To program the micro I suggest the [Minipro/XGecu](http://www.xgecu.com/en/) programmer.
 But i'm sure it can be programmed with the PICKit.
 
-To manually compile it the "--use-non-free" parameter must be set.
-Otherwire use the MAKEFILE in the firmware directory.
+To compile use the "--use-non-free" parameter.
+Or use the MAKEFILE in the firmware directory.
 
 ### License
 The PCBs are under the CERN OHL license.
