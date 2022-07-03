@@ -20,6 +20,7 @@ Since this microcontroller family don't have an internal EPROM, the micro always
 Is possible to choose the default region by change it in the code before compiling.
 
 ### License
+The PCBs are under the CERN OHL license.
 The firmwares, under the GPL3.
 
 This is an OPEN project.
