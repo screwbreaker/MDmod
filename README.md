@@ -1,7 +1,7 @@
 # MDmod
 Yes, another Mega Drive switchless mod
 
-![Board](https://raw.githubusercontent.com/screwbreaker/MDmod/master/pictures/PCBs.png)
+![Board](https://raw.githubusercontent.com/screwbreaker/MDmod/main/pictures/PCBs.png?token=GHSAT0AAAAAABWHLXQKYUN6ILYQPUOUOWLEYWBTTYQ)
 
 ### Summary
 This is another version of the classic switchless MOD for Mega Drive/Genesis.
