@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name "PIC_Library")(type "KiCad")(uri "${KIPRJMOD}/library/PIC_Library.kicad_sym")(options "")(descr ""))
+  (lib (name "PDK_Library")(type "KiCad")(uri "${KIPRJMOD}/library/PDK_Library.kicad_sym")(options "")(descr ""))
+  (lib (name "void")(type "KiCad")(uri "${KIPRJMOD}/library/void.kicad_sym")(options "")(descr ""))
+)
