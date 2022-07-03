@@ -20,14 +20,14 @@ That's it, that's why now there is another, or better, onother two switchless mo
 This version is very simple, it only allow to switch between the different regions, JP, USA, EU
 There is no way to change only the region or the video mode.
 
-## How to change region
+#### How to change region
 hold down the reset button
 after 2 seconds the region led start to blink fast
 the region shown change every second
 to confirm the region release the reset button
 the region led blink three times to confirm the selection
 
-## Normal reset
+#### Normal reset
 press the reset button for less than 2 seconds
 
 ### BOM
