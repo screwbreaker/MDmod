@@ -12,7 +12,11 @@ For each micro there is a little PCB for help in the installation.
 ### History
 Everything started because I got some Padauk microcontrollers, and I wanted to play with them.
 I choose to implement the Mega Drive switchless mod, because it seem very appropriate as a basic program for a microcontroller.
-Later, since SDCC also handle PIC microcontrollers, I thought it was nice to port the code for the old PIC16F630.
+
+Unfortunately, I've never enought free time to work on this project.
+When I finally managed to make it, the padauk microcontrollers where out of stock.
+They still cheap, but not easy to found now.
+So, since SDCC also handle PIC microcontrollers, I thought it was nice to port the code for the old PIC16F630.
 And then I made also some little PCB, to make the installation simpler.
 That's it, that's why now there is another, or better, onother two switchless mod for Mega Drive.
 
