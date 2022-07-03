@@ -1,0 +1,9 @@
+### Module positions - created on dom 3 lug 2022, 10:44:05 ###
+### Printed by Pcbnew version 6.0.6-3a73a75311~116~ubuntu20.04.1
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref     Val        Package                                           PosX       PosY       Rot  Side
+C1        100nF      C_0805_2012Metric_Pad1.18x1.45mm_HandSolder    10.2215    14.4526    0.0000  top
+R1        10K        R_0805_2012Metric_Pad1.20x1.40mm_HandSolder     2.5908    13.9446    0.0000  top
+U1        PIC16F630  SOIC-14_3.9x8.7mm_P1.27mm                      10.2108     8.4836    0.0000  top
+## End
