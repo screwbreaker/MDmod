@@ -1,7 +1,7 @@
 # MDmod PDK
 Mega Drive switchless MOD for Padauk microcontroller
 
-![Board](https://raw.githubusercontent.com/screwbreaker/MDmod/master/PIC/render/top.png)
+![Board](https://github.com/screwbreaker/MDmod/blob/main/PIC/render/MD_Mod_top.png?raw=true)
 
 ### Summary
 This mod is writted for the PIC16F630 microcontroller.
