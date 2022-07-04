@@ -75,12 +75,12 @@
 #define next_region()	region = ((region + 1) % REGIONS)
 
 #define RESET_DELAY	33	// about 270ms
-#define DEBOUNCE_DELAY	5		// about 40ms
+#define DEBOUNCE_DELAY	5	// about 40ms
 #define CHANGE_TIME	200	// about 1.6 sec with 8ms tick
 #define LED_FAST_DELAY	16	// about 130ms with 8ms tick
 #define LED_SLOW_DELAY	33	// about 270ms with 8ms tick
-#define SHOW_TURNS	8		// about 1s
-#define CONFIRM_TURNS	5		// 3 slow blinks
+#define SHOW_TURNS	8	// about 1s
+#define CONFIRM_TURNS	5	// 3 slow blinks
 
 #define ALL_OFF REGIONS
 
