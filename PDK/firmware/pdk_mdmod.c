@@ -85,7 +85,6 @@
 #define ALL_OFF REGIONS
 
 /* global typedefs and structures */
-/* global typedefs and structures */
 typedef union {
 	struct {
 		unsigned tick		: 1;
